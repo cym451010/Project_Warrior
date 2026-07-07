@@ -5,7 +5,6 @@
 #include "CoreMinimal.h"
 #include "EnhancedInputComponent.h"
 #include "DataAssets/Input/MyDataAsset_InputConfig.h"
-#include "Runtime/AudioCaptureImplementations/Windows/AudioCaputureWasapi/Private/AudioCaptureWasapi.h"
 #include "WarriorInputComponent.generated.h"
 
 struct FGameplayTag;
