@@ -62,7 +62,6 @@ void AWarriorHeroCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInp
 void AWarriorHeroCharacter::Input_Move(const FInputActionValue& InputActionValue)
 {
 	const FVector2D MovementVector = InputActionValue.Get<FVector2D>();
-	Debug::Print(FString::Printf(TEXT("ActorYaw: %f"), GetActorRotation().Yaw));
 	const FRotator MovementRotation(0.f, GetController()->GetControlRotation().Yaw, 0.f);
 
 	if (MovementVector.Y != 0.f)

@@ -6,6 +6,7 @@
 #include "AnimInstances/WarriorCharacterAnimInstance.h"
 #include "WarriorHeroAnimInstance.generated.h"
 
+class AWarriorHeroCharacter;
 /**
  * 
  */
@@ -14,4 +15,18 @@ class PROJECT_WARRIOR_API UWarriorHeroAnimInstance : public UWarriorCharacterAni
 {
 	GENERATED_BODY()
 	
+	virtual void NativeInitializeAnimation() override;
+	virtual void NativeThreadSafeUpdateAnimation(float DeltaSeconds) override;
+
+
+protected:
+	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = "AnimData|References")
+	AWarriorHeroCharacter* OwningHeroCharacter;
+
+	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = "AnimData|LocomotionData")
+	bool bShouldEnterRelaxState;	
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "AnimData|LocomotionData")
+	float ShouldEnterRelaxStateThreshHold = 5.f;
+
+	float IdleElapsedTime;
 };
