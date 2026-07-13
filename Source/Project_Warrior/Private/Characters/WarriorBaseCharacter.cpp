@@ -34,5 +34,5 @@ void AWarriorBaseCharacter::PossessedBy(AController* NewController)
 
 UAbilitySystemComponent* AWarriorBaseCharacter::GetAbilitySystemComponent() const
 {
-	return GetAbilitySystemComponent();
+	return GetWarriorAbilitySystemComponent();
 }
