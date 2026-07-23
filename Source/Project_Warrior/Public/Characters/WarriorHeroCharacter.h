@@ -56,5 +56,5 @@ private:
 #pragma endregion
 
 public:
-	FORCEINLINE UHeroCombatComponent* GetUHeroCombatComponent() const { return HeroCombatComponent; }
+	FORCEINLINE UHeroCombatComponent* GetHeroCombatComponent() const { return HeroCombatComponent; }
 };
